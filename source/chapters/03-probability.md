@@ -1,14 +1,14 @@
-**Probability**
+#Probability
 
 *Author(s)*
 
 Dan Osherson
 
-*Prerequisites*
+##Prerequisites
 
 None
 
-**Learning Objectives**
+##Learning Objectives
 
 1.  Define symmetrical outcomes
 
@@ -16,9 +16,9 @@ None
 
 3.  Determine whether the frequentist or subjective approach is better suited for a given situation
 
-**Introduction to Probability Standard**
+##Introduction to Probability Standard
 
-**Inferential statistics**[^1] is built on the foundation of probability theory, and has been remarkably successful in guiding opinion about the conclusions to be drawn from data. Yet (paradoxically) the very idea of probability has been plagued by controversy from the beginning of the subject to the present day. In this section we provide a glimpse of the debate about the interpretation of the probability concept.
+###Inferential statistics**[^1] is built on the foundation of probability theory, and has been remarkably successful in guiding opinion about the conclusions to be drawn from data. Yet (paradoxically) the very idea of probability has been plagued by controversy from the beginning of the subject to the present day. In this section we provide a glimpse of the debate about the interpretation of the probability concept.
 
 One conception of probability is drawn from the idea of **symmetrical outcomes**. For example, the two possible outcomes of tossing a fair coin seem not to be distinguishable in any way that affects which side will land up or down. Therefore the probability of heads is taken to be 1/2, as is the probability of tails. In general, if there are N symmetrical outcomes, the probability of any given one of them occurring is taken to be 1/N. Thus, if a six-sided die is rolled, the probability of any one of the six sides coming up is 1/6.
 
