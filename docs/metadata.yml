@@ -1,0 +1,80 @@
+---
+######################################################### 
+# TEXTBOOK INFORMATION
+######################################################### 
+title: Lantern
+subtitle: A Workflow for Publishing Open Textbooks
+author:
+  - Chris Diaz
+  - Lauren McKeen McDonald
+contributor:
+  - Sherry Wang
+  - Maria Cortez
+  - Angelina Jaglinski
+publication_date:
+doi:
+isbn_p:
+isbn_e:
+lang: en-US
+keywords: 
+  - pandoc
+  - minimal computing
+  - oer
+subjects: 
+  - OER
+  - Digital Publishing
+  - Open Textbooks
+  - Pandoc
+description: |
+  This guide introduces and demonstrates a minimal computing approach to producing open textbooks using free and open source software.
+cover: images/cover.png
+reference-section-title: References
+link-citations: true
+
+######################################################### 
+# COPYRIGHT AND LICENSING
+#########################################################
+# Select a Creative Commons License (4.0 International)
+# See: https://creativecommons.org/ licenses/
+# by = Attribution (CC BY)
+# nc = Non-commercial (CC BY-NC)
+# sa = ShareAlike (CC BY-SA)
+# nc-sa = NonCommercial-ShareAlike (CC BY-NC-SA)
+######################################################### 
+copyright:
+license: # by, nc, sa, nc-sa, cc0
+
+######################################################### 
+# PUBLISHER INFORMATION
+######################################################### 
+publisher: Northwestern University Libraries
+publisher_location: Evanston, IL # City, State
+publisher_url: https://www.library.northwestern.edu
+editors:
+git_url: https://github.com/nulib-oer/lantern
+
+######################################################### 
+# BOOK SETTINGS
+######################################################### 
+toc-title: "Contents"
+# Filter preferences:
+# - pandoc-crossref
+linkReferences: true
+
+######################################################### 
+# HTML SETTINGS
+######################################################### 
+
+
+######################################################### 
+# LaTeX/PDF SETTINGS
+######################################################### 
+documentclass: book # book, report, article, proc
+classoption: openany # openright, openany
+fontfamily: libertinus
+fontfamilyoptions:
+  - osf
+  - p
+fontsize: 11pt # 10pt (default), 11pt, 12pt
+column_number: onecolumn # onecolumn, twocolumn
+---

@@ -1,0 +1,170 @@
+\documentclass[
+$if(fontsize)$
+  $fontsize$,
+$endif$,
+$column_number$,
+$classoption$
+]{$documentclass$}
+
+% Standard Packages %
+\usepackage[colorlinks]{hyperref}
+\usepackage{longtable,booktabs,array}
+
+
+% figures %
+\usepackage{graphicx}
+% Redefine \includegraphics so that, unless explicit options are
+% given, the image width will not exceed the width or the height of the page.
+% Images get their normal width if they fit onto the page, but
+% are scaled down if they would overflow the margins.
+\makeatletter
+\def\ScaleWidthIfNeeded{%
+ \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\def\ScaleHeightIfNeeded{%
+  \ifdim\Gin@nat@height>0.9\textheight
+    0.9\textheight
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\setkeys{Gin}{width=\ScaleWidthIfNeeded,height=\ScaleHeightIfNeeded,keepaspectratio}%
+
+% Math Packages %
+\usepackage{amsmath,amssymb}
+\usepackage{ntheorem}
+
+% Load mdframed package for styling content blocks %
+\usepackage{xcolor}
+\usepackage[framemethod=default,backgroundcolor=lightgray]{mdframed}
+
+% Summary Content Block Styles %
+\newenvironment{learning-objectives}
+{\begin{mdframed}}
+{\end{mdframed}}
+
+% Pandoc LaTeX Configurations %
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+$if(numbersections)$
+    \setcounter{secnumdepth}{$if(secnumdepth)$$secnumdepth$$else$5$endif$}
+$else$
+    \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+$endif$
+
+% Code Block Shading %
+$if(highlighting-macros)$
+$highlighting-macros$
+$endif$
+
+% Load Fonts %
+$if(fontfamily)$
+\usepackage[$for(fontfamilyoptions)$$fontfamilyoptions$$sep$,$endfor$]{$fontfamily$}
+$else$
+\usepackage{lmodern}
+$endif$
+
+% Textbook Metadata %
+
+\title{$title$}
+\author{$for(author)$$author$$sep$ \and $endfor$}
+\date{$date$}
+
+% CSL References %
+$if(csl-refs)$
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newenvironment{CSLReferences}%
+  {$if(csl-hanging-indent)$\setlength{\parindent}{0pt}%
+  \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces$endif$}%
+  {\par}
+$endif$
+
+\begin{document}
+
+$for(include-before)$
+$include-before$
+$endfor$
+
+\maketitle
+
+\pagestyle{empty}
+
+%% copyright page
+
+\begingroup
+\footnotesize
+\parindent 0pt
+\parskip \baselineskip
+
+$description$
+
+\textcopyright{} $publication_date$ $for(author)$$author$$sep$ \and $endfor$ \\
+All rights reserved.
+
+This work may be distributed and/or modified under the conditions
+of the $license$ License.
+
+\begin{center}
+ 99 32 11 88 48 01\hspace{2em}9 9 8 6 5 4 %1 
+\end{center}
+
+\begin{center}
+\begin{tabular}{ll}
+First edition:  & May 2013 \\
+Second impression, with minor extensions & January 2009 \\
+Third impression, with minor extensions & May 2013 
+\end{tabular}
+\end{center}
+
+\vfill
+
+Catalogging in publication data
+
+
+\vfill
+
+$publisher$, \\
+$publisher_location$ \\
+\texttt{$publisher_url$}
+
+%%%%{\LARGE\plogo}
+\vspace*{2\baselineskip}
+
+
+\endgroup
+\clearpage
+
+
+$if(toc-title)$
+\renewcommand*\contentsname{$toc-title$}
+$endif$
+\setcounter{tocdepth}{$toc-depth$}
+\tableofcontents
+
+$if(lot)$
+\listoftables
+$endif$
+
+$if(lof)$
+\listoffigures
+$endif$
+
+$body$
+
+$for(include-after)$
+$include-after$
+$endfor$
+
+\end{document}
